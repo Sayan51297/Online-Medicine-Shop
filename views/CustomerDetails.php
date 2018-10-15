@@ -30,6 +30,10 @@
 			position: relative;
 			color: white;
 		}
+		b
+		{
+			margin-right: 15px;
+		}
 	</style>
 </head>
 <body>
@@ -66,81 +70,25 @@
 
 <div class="container-fluid">
 	<div class="row row-eq-height">
-		
-		<div class="col-lg-7">
-			<hr>
-			<center><h3>Medicine List</h3></center>
-			<hr>
-			<form>
-				
-				<div class="container-fluid">
-					<div class="row row-eq-height">
-						<div class="col-lg-10">
-							<div class="form-group">
-								<input type="text" class="form-control"  placeholder="Search...">				    
-							</div>
-						</div>
-						<div class="col-lg-2">
-							<div class="form-group">
-								<button type="submit" class="btn newButton" href="">SEARCH</button>							    
-							</div>
-						</div>
-					</div>
+		<div class="col-lg-5" style="margin: 1em auto">
+			<div class="registerForm-wrapper">
+				<div class="form-group">
+					<a class="navbar-brand customBrandLogoDesign" style="color:white;">Account Details</a>
 				</div>
-							
-			</form>		
-			<table>
-			  <tr>
-			    <th>Medicine ID</th>
-			    <th>Medicine Name</th>
-			    <th>Medicine Cost</th>
-			    <th>Medicine Quantity</th>
-			    <th>Order(Max 10)</th>
-			    <th>Add to Cart</th>
-			  </tr>
-			  <form>
-			    <?php foreach($data1 as $med):?>
-			      <tr>
-			        <td><?=$med['med_id']?></td>
-			        <td><?=$med['med_name']?></td>
-			        <td><?=$med['med_cost']?></td>
-			        <td><?=$med['med_quant']?></td>
-			        <td></td>
-			        <td><a href="#">Add To Cart</a></td>
-			      </tr>
-			    <?php endforeach ?>
-			  </form> 
-			</table>	
+				<p><b>Customer ID:</b><?=$data['cust_id']?></p>
+				<p><b>Customer Name:</b><?=$data['cust_name']?></p>
+				<p><b>Customer Email:</b><?=$data['cust_email']?></p>
+				<p><b>Customer Phone:</b><?=$data['cust_phone']?></p>	
+			</div>		
 		</div>
 
-		<div class="col-lg-5">
-			<hr>
-			<center><h3>On your Cart</h3></center>
-			<hr>
-			<table>
-			  <tr>
-			    <th>Medicine Name</th>
-			    <th>Medicine Cost</th>
-			    <th>Medicine Quantity</th>
-			    <th>Remove</th>
-			  </tr>
-			  <form>
-			    <?php foreach($data1 as $med):?>
-			      <tr>
-			        <td><?=$med['med_name']?></td>
-			        <td><?=$med['med_cost']?></td>
-			        <td><?=$med['med_quant']?></td>
-			        <td><a href="#">Remove</a></td>
-			      </tr>
-			    <?php endforeach ?>
-			  
-			  	  <tr>
-			  	  	<td colspan="2">Total Cost</td>
-			  	  	<td colspan="2">100</td>
-			  	  </tr> 
-			</table>
-					<br><button type="submit" class="btn newButton" href="">ORDER NOW</button>		
-			</form>	
+		<div class="col-lg-5" style="margin: 1em auto">
+			<div class="registerForm-wrapper">
+				<div class="form-group">
+					<a class="navbar-brand customBrandLogoDesign" style="color:white;">Delivery Details</a>
+				</div>
+				<p><b>Customer Address:</b></p><?=$data['cust_add']?>	
+			</div>
 		</div>
 	</div>
 </div>

@@ -30,6 +30,10 @@
 			position: relative;
 			color: white;
 		}
+		b
+		{
+			margin-right: 15px;
+		}
 	</style>
 </head>
 <body>
@@ -49,7 +53,7 @@
         <a class="nav-link" href="../home/customerDetails">Account</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="../home/customerTransaction">Transaction History</a>
+        <a class="nav-link" href="#">Transaction History</a>
       </li>
     </ul>
 
@@ -66,81 +70,37 @@
 
 <div class="container-fluid">
 	<div class="row row-eq-height">
-		
-		<div class="col-lg-7">
-			<hr>
-			<center><h3>Medicine List</h3></center>
-			<hr>
-			<form>
-				
-				<div class="container-fluid">
-					<div class="row row-eq-height">
-						<div class="col-lg-10">
-							<div class="form-group">
-								<input type="text" class="form-control"  placeholder="Search...">				    
-							</div>
-						</div>
-						<div class="col-lg-2">
-							<div class="form-group">
-								<button type="submit" class="btn newButton" href="">SEARCH</button>							    
-							</div>
-						</div>
-					</div>
-				</div>
-							
-			</form>		
-			<table>
-			  <tr>
-			    <th>Medicine ID</th>
-			    <th>Medicine Name</th>
-			    <th>Medicine Cost</th>
-			    <th>Medicine Quantity</th>
-			    <th>Order(Max 10)</th>
-			    <th>Add to Cart</th>
-			  </tr>
-			  <form>
-			    <?php foreach($data1 as $med):?>
-			      <tr>
-			        <td><?=$med['med_id']?></td>
-			        <td><?=$med['med_name']?></td>
-			        <td><?=$med['med_cost']?></td>
-			        <td><?=$med['med_quant']?></td>
-			        <td></td>
-			        <td><a href="#">Add To Cart</a></td>
-			      </tr>
-			    <?php endforeach ?>
-			  </form> 
-			</table>	
-		</div>
-
-		<div class="col-lg-5">
-			<hr>
-			<center><h3>On your Cart</h3></center>
-			<hr>
-			<table>
-			  <tr>
-			    <th>Medicine Name</th>
-			    <th>Medicine Cost</th>
-			    <th>Medicine Quantity</th>
-			    <th>Remove</th>
-			  </tr>
-			  <form>
-			    <?php foreach($data1 as $med):?>
-			      <tr>
-			        <td><?=$med['med_name']?></td>
-			        <td><?=$med['med_cost']?></td>
-			        <td><?=$med['med_quant']?></td>
-			        <td><a href="#">Remove</a></td>
-			      </tr>
-			    <?php endforeach ?>
-			  
-			  	  <tr>
-			  	  	<td colspan="2">Total Cost</td>
-			  	  	<td colspan="2">100</td>
-			  	  </tr> 
-			</table>
-					<br><button type="submit" class="btn newButton" href="">ORDER NOW</button>		
-			</form>	
+		<div class="col-lg-10" style="margin: 1em auto">
+		<hr>
+			<center><h2>Transaction Details</h2></center>
+		<hr>
+		<table>
+			<tr>
+				<th>Transaction ID</th>
+				<th>Total Cost</th>
+				<th>Transaction Date</th>
+			</tr>
+			<tr>
+				<td>A7896</td>
+				<td>200.00</td>
+				<td>17/08/2018</td>
+			</tr>
+			<tr>
+				<td>A7896</td>
+				<td>200.00</td>
+				<td>17/08/2018</td>
+			</tr>
+			<tr>
+				<td>A7896</td>
+				<td>200.00</td>
+				<td>17/08/2018</td>
+			</tr>
+			<tr>
+				<td>A7896</td>
+				<td>200.00</td>
+				<td>17/08/2018</td>
+			</tr>
+		</table>		
 		</div>
 	</div>
 </div>
